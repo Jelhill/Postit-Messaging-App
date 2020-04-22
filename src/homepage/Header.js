@@ -6,7 +6,9 @@ const Header = () => {
   return (
     <div className='box-1'>
       <img src={nnamdi} alt='user' />
-      <Link className='link'>Logout</Link>
+      <Link to='/' className='link'>
+        Logout
+      </Link>
     </div>
   );
 };
