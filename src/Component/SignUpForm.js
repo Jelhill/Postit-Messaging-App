@@ -1,8 +1,12 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
+import LeftSide from "./LeftSide";
+
 
 export default function RightSide() {
   return (
+    <Fragment>
+    <LeftSide />
     <div className='col-lg-6 landingRight'>
       <form action='' className='form-div'>
         <div>
@@ -43,7 +47,7 @@ export default function RightSide() {
             <input type='checkbox' />
             Remember me{" "}
           </div>
-          <a href='#'>Forgot Password</a>
+          <Link to=''>Forgot Password</Link>
         </div>
         <button className='login'>Sign In</button>
         <button className='google-signIn' id='login'>
@@ -56,5 +60,6 @@ export default function RightSide() {
         </p>
       </div>
     </div>
+    </Fragment>
   );
 }

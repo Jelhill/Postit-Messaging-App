@@ -1,20 +1,20 @@
-import React from "react";
+import React, { Fragment } from "react";
 import "./App.css";
-import Header from "./homepage/Header";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Addmessage from "./homepage/Addmessage";
 import LandingPage from "./Component/LandingPage";
+import SignUpForm from "./Component/SignUpForm"
 import Homepage from "./homepage/Homepage";
 
 function App() {
   return (
-    <Router>
+    <Fragment>
       <Switch>
-        <Route exact path='/' component={LandingPage} />
+        <Route exact path="/" component={LandingPage} />
+        <Route path={"/signUpForm"} component={SignUpForm}></Route>
         <Route exact path='/homepage' component={Homepage} />
       </Switch>
-    </Router>
+      </Fragment>
   );
 }
 
