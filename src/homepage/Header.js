@@ -8,7 +8,7 @@ const Header = () => {
       <img src={nnamdi} alt='user' />
       <Link to='/' className='link'>
         Logout
-      </Link>
+      </Link> 
     </div>
   );
 };
