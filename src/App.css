@@ -8,8 +8,9 @@ body {
   background-color: #f3f3fb;
 }
 .box-1 {
-  width: 100%;
+  width: 75vw;
   height: 10vh;
+  margin-left: 25vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -39,10 +40,10 @@ body {
 }
 .addmessage {
   background-color: #ffffff;
-  margin-top: 32%;
+  margin-top: 40%;
   width: 95%;
   height: 20vh;
-  margin-left: 26px;
+  margin-left: 28vw;
   border-radius: 5px;
   border: 1px solid #f3f3fb;
   box-sizing: border-box;
@@ -248,3 +249,105 @@ button:hover {
     width: 50vw;
   }
 }
+
+.container{
+  position: relative;
+}
+.homepageLeft {
+  position: absolute;
+  width: 25vw;
+  height: 100vh;
+  left: 0px;
+  top: 0px;
+  
+  background: #154360;
+}
+
+.homepageLeft .logo{
+    margin-left: 58px;
+    margin-top: 20px;
+    display:flex;
+}
+
+.homepageLeft .logo .postit{
+    font-weight: bold;
+    font-size: 35px;
+    align-items: center;
+    text-align: center;
+    color: #FFF;
+    margin-left: 10px;
+}
+
+.homepageLeft .create-channel{
+    display: flex;
+    margin-left: 80px;
+    
+}
+
+.homepageLeft .create-channel .create{
+    font-weight: bold;
+    font-size: 15px;
+    color: rgba(255,255,255,0.5)
+}
+
+.homepageLeft .create-channel .add {
+    margin-left: 45px;
+    font-size: 15px;
+    font-weight: 50px;
+    border:2px;
+    color: #fff
+}
+
+.homepageLeft .group{
+  margin-left: 80px;
+  margin-top: 5px;
+
+}
+
+.homepageLeft .group .groups {
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #FFF
+}
+
+.homepageLeft .group .groups:hover {
+    color: #fc7037;
+}
+.homepageLeft .group .one{
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #fc7037;
+}
+.Nnamdi{
+  width:75vw;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .homepageLeft .logo .postit{
+    font-size: 20px;
+}
+.homepageLeft .group{
+  margin-left: 20px;
+}
+.homepageLeft .create-channel{
+  margin-left: 20px;
+}
+.homepageLeft .group .groups {
+  font-size: 10px;
+}
+.homepageLeft .group .one{
+  font-size: 10px;
+}
+.homepageLeft .create-channel .create{
+  font-size: 10px;
+}
+
+}
+@media (max-width: 600px) {
+  .homepageLeft .logo .postit{
+    
+    font-size: 15px;
+    
+}
+  }
