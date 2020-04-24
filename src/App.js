@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import LandingPage from "./Component/LandingPage";
 import SignUpForm from "./Component/SignUpForm"
 import Dashboard from "./homepage/Dashboard";
+import AddPeople from "./Component/AddPeople";
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route path={"/signUpForm"} component={SignUpForm}></Route>
         <Route exact path='/homepage' component={Dashboard} />
       </Switch>
+      <AddPeople />
       </Fragment>
   );
 }
