@@ -6,7 +6,7 @@ import { Link } from "react-router-dom"
 
 class Dashboard extends React.Component{
   render(){
-    return(
+    return( 
       <div className="Container">
          <div className="homepageLeft">
             <div className="logo">
@@ -18,7 +18,10 @@ class Dashboard extends React.Component{
                 <p className="add"><Link to="">+</Link></p>
             </div>
             <div className="group">
-                <p><Link className="one" to="/addPeople">Software Engineers</Link></p>
+                <p><Link className="one" to={{
+                  pathname: "/addPeople",
+                  state: {openModal: this.props.openModal}
+                  }}>Software Engineers</Link></p>
                 <p><Link className="groups" to="/addPeople"> UX/UI Designers</Link></p>
                 <p><Link className="groups" to="/addPeople"> Data Scientists</Link></p>                
             </div>
