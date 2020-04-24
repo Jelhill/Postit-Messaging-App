@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from "./Header";
 import Addmessage from "./Addmessage";
+import { Link } from "react-router-dom"
 
 
 class Dashboard extends React.Component{
@@ -8,20 +9,19 @@ class Dashboard extends React.Component{
     return(
       <div className="Container">
          <div className="homepageLeft">
-        <div className="logo">
-          <img src="logo.png" alt=""/>
-          <p className="postit">Postit</p>
-        </div>
-        <div className="create-channel">
-            <p className="create">Create Channel</p>
-            <p className="add">+</p>
-        </div>
-
-        <div className="group">
-            <p className=" one"> Software Engineers</p>
-            <p className="groups"> UX/UI Designers</p>
-            <p className="groups"> Data Scientists</p>
-        </div>
+            <div className="logo">
+              <img src="logo.png" alt=""/>
+              <p className="postit">Postit</p>
+            </div>
+            <div className="create-channel">
+                <p ><Link className="create">Create Channel</Link></p>
+                <p className="add"><Link to="">+</Link></p>
+            </div>
+            <div className="group">
+                <p><Link className="one" to="/addPeople">Software Engineers</Link></p>
+                <p><Link className="groups" to="/addPeople"> UX/UI Designers</Link></p>
+                <p><Link className="groups" to="/addPeople"> Data Scientists</Link></p>                
+            </div>
         </div>
         <div className="Nnamdi">
           <Header />
