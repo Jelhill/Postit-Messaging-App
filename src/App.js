@@ -29,10 +29,10 @@ class App extends Component {
       <Fragment>
         <Switch>
           <Route exact path="/" component={LandingPage} />
-          <Route path={"/signUpForm"} component={SignUpForm}></Route>
+          <Route path={"/signUpForm"} component={SignUpForm} />
           <Route exact path='/homepage' component={Dashboard} />
         </Switch>
-        <AddPeople closeModal={this.closeModal} openModal={this.openModal} modalOpen={this.state.modalOpen}/>
+        <Route path="/addPeople" render={ () => <AddPeople closeModal={this.closeModal} openModal={this.openModal} modalOpen={this.state.modalOpen}/> } />
         </Fragment>
     );
   }

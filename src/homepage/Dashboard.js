@@ -19,7 +19,6 @@ class Dashboard extends React.Component{
             </div>
             <div className="group">
                 <p><Link className="one" to={{
-                  pathname: "/addPeople",
                   state: {openModal: this.props.openModal}
                   }}>Software Engineers</Link></p>
                 <p><Link className="groups" to="/addPeople"> UX/UI Designers</Link></p>
