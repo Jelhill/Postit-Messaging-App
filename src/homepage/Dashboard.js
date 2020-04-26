@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from "./Header";
 import Addmessage from "./Addmessage";
+// import MessageDisplay from "./MessageDisplay";
 
 
 class Dashboard extends React.Component{
@@ -26,6 +27,7 @@ class Dashboard extends React.Component{
         <div className="Nnamdi">
           <Header />
           <Addmessage />
+          {/* <MessageDisplay /> */}
         </div>
       </div>
     )
