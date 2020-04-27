@@ -14,7 +14,7 @@ export default function RightSide() {
             placeholder='Email'
             name='email'
             id='email'
-            autocomplete='on'
+            autoComplete="off"
           />
           <br />
           <input
@@ -22,11 +22,11 @@ export default function RightSide() {
             placeholder='Password'
             name='password'
             id='password'
-            autocomplete='off'
+            autoComplete="off"
           />
         </div>
-        <div class='below-input'>
-          <div class='below-input-right'>
+        <div className='below-input'>
+          <div className='below-input-right'>
             <input type='checkbox' />
             Remember me{" "}
           </div>
@@ -37,7 +37,7 @@ export default function RightSide() {
           Sign In with Google
         </button>
       </form>
-      <div class='dontHaveAccount'>
+      <div className='dontHaveAccount'>
         <p>
           Dont have an account? <Link to={"/signUpForm"}> Sign Up</Link>
         </p>

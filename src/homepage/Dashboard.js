@@ -1,10 +1,12 @@
 import React from 'react'
 import Header from "./Header";
 import Addmessage from "./Addmessage";
+// import MessageDisplay from "./MessageDisplay";
 import { Link } from "react-router-dom"
 
 
 class Dashboard extends React.Component{
+  
   render(){
     return( 
       <div className="Container">
@@ -15,11 +17,10 @@ class Dashboard extends React.Component{
             </div>
             <div className="create-channel">
                 <p ><Link className="create">Create Channel</Link></p>
-                <p className="add"><Link to="">+</Link></p>
+                <p className="add"><Link to="/createChannel">+</Link></p>
             </div>
             <div className="group">
                 <p><Link className="one" to={{
-                  pathname: "/addPeople",
                   state: {openModal: this.props.openModal}
                   }}>Software Engineers</Link></p>
                 <p><Link className="groups" to="/addPeople"> UX/UI Designers</Link></p>
@@ -29,6 +30,7 @@ class Dashboard extends React.Component{
         <div className="Nnamdi">
           <Header />
           <Addmessage />
+          {/* <MessageDisplay /> */}
         </div>
       </div>
     )

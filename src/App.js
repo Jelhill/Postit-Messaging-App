@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import LandingPage from "./Component/LandingPage";
 import SignUpForm from "./Component/SignUpForm"
 import Dashboard from "./homepage/Dashboard";
+import Create from "./CreateChannel/Create";
 import AddPeople from "./Component/AddPeople";
 
 
@@ -29,14 +30,14 @@ class App extends Component {
       <Fragment>
         <Switch>
           <Route exact path="/" component={LandingPage} />
-          <Route path={"/signUpForm"} component={SignUpForm}></Route>
+          <Route path={"/signUpForm"} component={SignUpForm} />
           <Route exact path='/homepage' component={Dashboard} />
+          <Route exact path='/createChannel' component={Create} />
         </Switch>
-        <AddPeople closeModal={this.closeModal} openModal={this.openModal} modalOpen={this.state.modalOpen}/>
+        <Route path="/addPeople" render={ () => <AddPeople closeModal={this.closeModal} openModal={this.openModal} modalOpen={this.state.modalOpen}/> } />
         </Fragment>
     );
   }
-  
 }
 
 export default App;
