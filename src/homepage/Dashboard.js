@@ -1,11 +1,8 @@
 import React from 'react'
 import Header from "./Header";
 import Addmessage from "./Addmessage";
-<<<<<<< HEAD
 // import MessageDisplay from "./MessageDisplay";
-=======
 import { Link } from "react-router-dom"
->>>>>>> development
 
 
 class Dashboard extends React.Component{
@@ -20,7 +17,7 @@ class Dashboard extends React.Component{
             </div>
             <div className="create-channel">
                 <p ><Link className="create">Create Channel</Link></p>
-                <p className="add"><Link to="">+</Link></p>
+                <p className="add"><Link to="/createChannel">+</Link></p>
             </div>
             <div className="group">
                 <p><Link className="one" to={{
