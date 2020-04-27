@@ -4,8 +4,7 @@ const initialState = {
   data,
 };
 
-export const reducer = (state = initialState, action) => {
+const UserReducer = (state = initialState, action) => {
   const newstate = { ...state };
-
-  return newstate;
 };
+export default UserReducer;
