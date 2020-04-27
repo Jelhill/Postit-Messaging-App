@@ -8,14 +8,10 @@ export const Addmessage = () => {
                 <div className="sub-compo">
                   <div class="post">
                   <img src={nnamdi} alt='user' />
-                      <h5>Okorie Nnamdi</h5>
+                      <p>okorie Nnamdi</p>
                     </div>  
-                    <p>
-                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                     Laudantium perferendis tempore neque fuga! Nobis inventore, odio
-                      aliquam animi repellendus magnam sunt, tempora quibusdam, ducimus
-                      consequatur est qui placeat hic sapiente libero cupiditate! Vitae
-                      qui quaerat dolores placeat, ab dignissimos velit.
+                    <p className="message">
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit.                
                     </p>
                 </div>
             </div>

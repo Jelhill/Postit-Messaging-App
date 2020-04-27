@@ -24,7 +24,7 @@ export default class Create extends Component {
               </div>
             </div>
             <div className="row">
-              <span><i class="fa fa-user-plus"></i></span>
+              {/* <span><i class="fa fa-user-plus"></i></span> */}
               <div className="right"> 
               <Link to="/" className="lnk">Add People</Link>
               <input
