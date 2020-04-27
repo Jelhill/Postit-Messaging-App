@@ -1,7 +1,11 @@
 import React from 'react'
 import Header from "./Header";
 import Addmessage from "./Addmessage";
+<<<<<<< HEAD
+// import MessageDisplay from "./MessageDisplay";
+=======
 import { Link } from "react-router-dom"
+>>>>>>> development
 
 
 class Dashboard extends React.Component{
@@ -28,6 +32,7 @@ class Dashboard extends React.Component{
         <div className="Nnamdi">
           <Header />
           <Addmessage />
+          {/* <MessageDisplay /> */}
         </div>
       </div>
     )
