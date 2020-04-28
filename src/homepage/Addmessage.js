@@ -6,7 +6,7 @@ export const Addmessage = () => {
           <div>
            <div className="compo-1">
                 <div className="sub-compo">
-                  <div class="post">
+                  <div className="post">
                   <img src={nnamdi} alt='user' />
                       <h5>Okorie Nnamdi</h5>
                     </div>  
@@ -30,7 +30,7 @@ export const Addmessage = () => {
         />
         <button className='input-group-text' id='basic-addon'>
           <svg
-            class='bi bi-cursor-fill'
+            className='bi bi-cursor-fill'
             width='1em'
             height='1em'
             viewBox='0 0 16 16'
@@ -46,7 +46,7 @@ export const Addmessage = () => {
         </button>
         <button className='input-group-text' id='basic-addon'>
           <svg
-            class='bi bi-paperclip'
+            className='bi bi-paperclip'
             width='1em'
             height='1em'
             viewBox='0 0 16 16'
