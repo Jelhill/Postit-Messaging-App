@@ -1,15 +1,13 @@
-
-import { data } from "../Data/Data"
+import { data } from "../Data/Data";
 
 const initialState = {
-    data
-}
+  data,
+};
 
 const UserReducer = (state = initialState, action) => {
-    const newstate = {...state}
-
-    return newstate
-
-}
-
-export default UserReducer
+  switch (action.type) {
+    default:
+      return state;
+  }
+};
+export default UserReducer;
