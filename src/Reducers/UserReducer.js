@@ -5,6 +5,9 @@ const initialState = {
 };
 
 const UserReducer = (state = initialState, action) => {
-  const newstate = { ...state };
+  switch (action.type) {
+    default:
+      return state;
+  }
 };
 export default UserReducer;
