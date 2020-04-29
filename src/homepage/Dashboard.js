@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "./Header";
-import Addmessage from "./Addmessage";
+import Addmessage from "./AddMessage";
 import { Link } from "react-router-dom"
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
