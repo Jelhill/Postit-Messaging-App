@@ -23,25 +23,7 @@ const UserReducer = (state = initialState, action) => {
         newstate.dummyMessages = newData
     }
 
-    // switch (action.type) {
-    //   default:
-    //     return newstate;
-    // }
-
     return newstate
 }
 
 export default UserReducer
-
-// const initialState = {
-//   data,
-// };
-
-// const UserReducer = (state = initialState, action) => {
-//   switch (action.type) {
-//     default:
-//       return state;
-//   }
-// };
-// export default UserReducer;
-

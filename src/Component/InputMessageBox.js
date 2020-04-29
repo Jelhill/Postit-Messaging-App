@@ -29,9 +29,7 @@ function InputMessageBox(props) {
             </form>
             
         </Fragment>
-    )
-
-    
+    )    
 }
 
 const mapStateToProps = (state) => {  
