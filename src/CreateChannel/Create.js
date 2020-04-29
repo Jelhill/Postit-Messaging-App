@@ -31,7 +31,6 @@ export default class Create extends Component {
                   type='submit'
                   value = 'Create Group'
               />
-
               </div>
             </div>
             </form>

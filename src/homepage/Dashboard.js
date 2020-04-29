@@ -1,7 +1,6 @@
 import React from 'react'
 import Header from "./Header";
 import Addmessage from "./Addmessage";
-// import MessageDisplay from "./MessageDisplay";
 import { Link } from "react-router-dom"
 
 
@@ -16,7 +15,7 @@ class Dashboard extends React.Component{
               <p className="postit">Postit</p>
             </div>
             <div className="create-channel">
-                <p ><Link className="create">Create Channel</Link></p>
+                <p ><Link to={"/createChannel"}className="create">Create Channel</Link></p>
                 <p className="add"><Link to="/createChannel">+</Link></p>
             </div>
             <div className="group">
@@ -30,11 +29,11 @@ class Dashboard extends React.Component{
         <div className="Nnamdi">
           <Header />
           <Addmessage />
-          {/* <MessageDisplay /> */}
         </div>
       </div>
     )
   }
 }
+
 
 export default Dashboard;
