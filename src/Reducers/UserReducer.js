@@ -25,11 +25,6 @@ const UserReducer = (state = initialState, action) => {
     newstate.dummyMessages = newData;
   }
 
-  // switch (action.type) {
-  //   default:
-  //     return newstate;
-  // }
-
   return newstate;
 };
 

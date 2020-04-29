@@ -1,13 +1,13 @@
 import React from "react";
 import Header from "./Header";
-import Addmessage from "./Addmessage";
+import AddMessage from "./Addmessage";
 import { Link } from "react-router-dom";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import { connect } from "react-redux";
 
-export const Dashboard = ({ dispatch, groupData }) => {
+const Dashboard = ({ dispatch, groupData }) => {
   return (
     <div className='Container'>
       <div className='homepageLeft'>
@@ -35,7 +35,7 @@ export const Dashboard = ({ dispatch, groupData }) => {
       </div>
       <div className='Nnamdi'>
         <Header />
-        <Addmessage />
+        <AddMessage />
       </div>
     </div>
   );
