@@ -1,13 +1,14 @@
 import React from "react";
 import Header from "./Header";
-import Addmessage from "./Addmessage";
+import AddMessage from "./Addmessage";
 import { Link } from "react-router-dom";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemText from "@material-ui/core/ListItemText";
-import { connect } from "react-redux";
+import Groups from "./Groups";
+// import List from "@material-ui/core/List";
+// import ListItem from "@material-ui/core/ListItem";
+// import ListItemText from "@material-ui/core/ListItemText";
+// import { connect } from "react-redux";
 
-export const Dashboard = ({ dispatch, groupData }) => {
+const Dashboard = () => {
   return (
     <div className='Container'>
       <div className='homepageLeft'>
@@ -23,27 +24,14 @@ export const Dashboard = ({ dispatch, groupData }) => {
             <Link to='/creategroup'>+</Link>
           </p>
         </div>
-        <div className='group'>
-          <List>
-            {groupData.map((topic, index) => (
-              <ListItem key={topic.index} button>
-                <ListItemText primary={topic.groups.name} />
-              </ListItem>
-            ))}
-          </List>
-        </div>
+        <Groups />
       </div>
       <div className='Nnamdi'>
         <Header />
-        <Addmessage />
+        <AddMessage />
       </div>
     </div>
   );
 };
 
-const mapStateToProps = (state) => {
-  return {
-    groupData: state.groupData,
-  };
-};
-export default connect(mapStateToProps)(Dashboard);
+export default Dashboard;

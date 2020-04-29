@@ -1,4 +1,10 @@
-import { groupData, users, dummyMessages, data } from "../Data/Data";
+import {
+  groupData,
+  users,
+  dummyMessages,
+  data,
+  groupMessages,
+} from "../Data/Data";
 
 const initialState = {
   groupData,
@@ -6,6 +12,7 @@ const initialState = {
   dummyMessages,
   userTypedMessage: "",
   data,
+  groupMessages,
 };
 
 const UserReducer = (state = initialState, action) => {
@@ -24,11 +31,6 @@ const UserReducer = (state = initialState, action) => {
     let newData = [...newstate.dummyMessages, postData];
     newstate.dummyMessages = newData;
   }
-
-  // switch (action.type) {
-  //   default:
-  //     return newstate;
-  // }
 
   return newstate;
 };

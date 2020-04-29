@@ -11,3 +11,9 @@ export const postMessage = (message) => {
     message: message,
   };
 };
+
+export const groupmessages = () => {
+  return {
+    type: "RECEIVE_MESSAGE",
+  };
+};
