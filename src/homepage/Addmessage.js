@@ -1,21 +1,8 @@
 import React from "react";
-import nnamdi from "../Images/nnamdi.jpg";
 
 export const Addmessage = () => {
   return (
-          <div>
-           <div className="compo-1">
-                <div className="sub-compo">
-                  <div class="post">
-                  <img src={nnamdi} alt='user' />
-                      <p>okorie Nnamdi</p>
-                    </div>  
-                    <p className="message">
-                     Lorem ipsum dolor sit amet consectetur adipisicing elit.                
-                    </p>
-                </div>
-            </div>
-            <form className='addmessage'>
+    <form className='addmessage'>
       <div className='medialine'>
         <input
           type='text'
@@ -58,7 +45,6 @@ export const Addmessage = () => {
         </button>
       </div>
     </form>
-          </div>   
   );
 };
 

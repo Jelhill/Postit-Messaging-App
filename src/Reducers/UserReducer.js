@@ -6,6 +6,8 @@ const initialState = {
 
 const UserReducer = (state = initialState, action) => {
   switch (action.type) {
+    case "RECEIVE_MESSAGE":
+      return {};
     default:
       return state;
   }

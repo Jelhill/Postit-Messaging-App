@@ -4,7 +4,6 @@ import Addmessage from "./Addmessage";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
-// import MessageDisplay from "./MessageDisplay";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 
@@ -38,7 +37,6 @@ export const Dashboard = ({ dispatch, groupData }) => {
       <div className='Nnamdi'>
         <Header />
         <Addmessage />
-        {/* <MessageDisplay /> */}
       </div>
     </div>
   );
