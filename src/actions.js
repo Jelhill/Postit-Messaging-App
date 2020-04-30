@@ -12,8 +12,10 @@ export const postMessage = (message) => {
   };
 };
 
-export const groupmessages = () => {
-  return {
-    type: "RECEIVE_MESSAGE",
-  };
-};
+// export const selectedGroup = (groupMessages) => {
+//   console.log("you clicked on me", groupMessages[0]);
+//   return {
+//     type: "RECEIVE_MESSAGE",
+//     payload: groupMessages,
+//   };
+// };
