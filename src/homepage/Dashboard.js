@@ -6,7 +6,7 @@ import Groups from "./Groups";
 // import List from "@material-ui/core/List";
 // import ListItem from "@material-ui/core/ListItem";
 // import ListItemText from "@material-ui/core/ListItemText";
-// import { connect } from "react-redux";
+import { connect } from "react-redux";
 
 const Dashboard = () => {
   return (
@@ -34,4 +34,9 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+const mapStateToProps = (state) => {
+  return {
+    groupData: state.groupData,
+  };
+};
+export default connect(mapStateToProps)(Dashboard);

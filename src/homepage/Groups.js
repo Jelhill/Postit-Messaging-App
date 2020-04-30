@@ -1,16 +1,29 @@
 import React from "react";
+
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
-import { connect } from "react-redux";
+import { selectedGroup } from "../actions";
+import { connect, useDispatch } from "react-redux";
+import { groupData } from "../Data/Data";
 
-const Groups = ({ dispatch, groupData }) => {
+const Groups = ({ members }) => {
+  const allChats = members;
+  const group = Object.keys(allChats).map((value) => ({
+    name: members[value]?.name,
+    key: value,
+  }));
+  const dispatch = useDispatch();
   return (
     <div className='group'>
       <List>
-        {groupData.map((topic, index) => (
-          <ListItem key={topic.index} button>
-            <ListItemText primary={topic.groups.name} />
+        {group.map(({ name, key }, index) => (
+          <ListItem
+            key={index}
+            onClick={() => selectedGroup(groupData[key], dispatch)}
+            button
+          >
+            <ListItemText primary={name} />
           </ListItem>
         ))}
       </List>
@@ -19,7 +32,10 @@ const Groups = ({ dispatch, groupData }) => {
 };
 const mapStateToProps = (state) => {
   return {
-    groupData: state.groupData,
+    members: state.groupData,
   };
 };
-export default connect(mapStateToProps)(Groups);
+// const mapDispatchToProps = (dispatch) => {
+//   return bindActionCreators({ selectedGroup: selectedGroup }, dispatch);
+// };
+export default connect(mapStateToProps, null)(Groups);

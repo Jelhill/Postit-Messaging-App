@@ -7,6 +7,7 @@ import { Provider } from "react-redux";
 import { createStore } from "redux";
 import UserReducer from "./Reducers/UserReducer";
 
+// const rootReducer = combineReducers({ UserReducer: UserReducer });
 const store = createStore(UserReducer);
 
 ReactDOM.render(
