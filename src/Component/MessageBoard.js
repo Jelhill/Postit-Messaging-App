@@ -26,7 +26,7 @@ function MessageBoard(props) {
 
 const mapStateToProps = (state) => {
   return {
-    dummyMessages: state.dummyMessages,
+    dummyMessages: state.UserReducer.dummyMessages,
   };
 };
 

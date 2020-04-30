@@ -43,7 +43,7 @@ const Dashboard = ({ dispatch, groupData }) => {
 
 const mapStateToProps = (state) => {
   return {
-    groupData: state.groupData,
+    groupData: state.UserReducer.groupData,
   };
 };
 export default connect(mapStateToProps)(Dashboard);
