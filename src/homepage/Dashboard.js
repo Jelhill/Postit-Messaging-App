@@ -1,15 +1,13 @@
 import React from "react";
 import Header from "./Header";
-import AddMessage from "./AddMessage";
-import { Link } from "react-router-dom"
+import AddMessage from "./Addmessage";
+import { Link } from "react-router-dom";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import { connect } from "react-redux";
 
-
 const Dashboard = ({ dispatch, groupData }) => {
-
   return (
     <div className='Container'>
       <div className='homepageLeft'>
@@ -33,7 +31,6 @@ const Dashboard = ({ dispatch, groupData }) => {
               </ListItem>
             ))}
           </List>
-
         </div>
       </div>
       <div className='Nnamdi'>
@@ -44,10 +41,9 @@ const Dashboard = ({ dispatch, groupData }) => {
   );
 };
 
-
 const mapStateToProps = (state) => {
   return {
-    groupData: state.data,
+    groupData: state.groupData,
   };
 };
-export default connect(mapStateToProps)(Dashboard)
+export default connect(mapStateToProps)(Dashboard);
