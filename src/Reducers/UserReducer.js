@@ -6,6 +6,7 @@ const initialState = {
   dummyMessages,
   userTypedMessage: "",
   data,
+  selectedGroup: null,
 };
 
 const UserReducer = (state = initialState, action) => {
@@ -24,7 +25,12 @@ const UserReducer = (state = initialState, action) => {
     let newData = [...newstate.dummyMessages, postData];
     newstate.dummyMessages = newData;
   }
-
+  if (action.type === "SELECTED_GROUP") {
+    return {
+      ...state,
+      selectedGroup: action.payload,
+    };
+  }
   return newstate;
 };
 

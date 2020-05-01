@@ -40,10 +40,10 @@ function InputMessageBox(props) {
 
 const mapStateToProps = (state) => {
   return {
-    user: state.UserReducer.users,
-    groupData: state.UserReducer.groupData,
-    dummyMessages: state.UserReducer.dummyMessages,
-    userTypedMessage: state.UserReducer.userTypedMessage,
+    user: state.users,
+    groupData: state.groupData,
+    dummyMessages: state.dummyMessages,
+    userTypedMessage: state.userTypedMessage,
   };
 };
 

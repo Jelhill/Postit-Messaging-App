@@ -11,3 +11,11 @@ export const postMessage = (message) => {
     message: message,
   };
 };
+
+export const selectedGroup = (groupData, dispatch) => {
+  console.log(groupData, dispatch);
+  dispatch({
+    type: "SELECTED_GROUP",
+    payload: groupData,
+  });
+};

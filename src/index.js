@@ -4,11 +4,11 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Provider } from "react-redux";
-import { createStore, combineReducers } from "redux";
+import { createStore } from "redux";
 import UserReducer from "./Reducers/UserReducer";
 
-const rootReducer = combineReducers({UserReducer: UserReducer})
-const store = createStore(rootReducer);
+// const rootReducer = combineReducers({ UserReducer: UserReducer });
+const store = createStore(UserReducer);
 
 ReactDOM.render(
   <Provider store={store}>
