@@ -7,6 +7,7 @@ import SignUpForm from "./Component/SignUpForm";
 import Dashboard from "./homepage/Dashboard";
 import Create from "./CreateChannel/Create";
 import AddPeople from "./Component/AddPeople";
+import Groups from "./homepage/Groups";
 
 class App extends Component {
   state = {
@@ -31,6 +32,7 @@ class App extends Component {
           <Route path={"/signUpForm"} component={SignUpForm} />
           <Route exact path='/homepage' component={Dashboard} />
           <Route exact path='/creategroup' component={Create} />
+          <Route exact path="/messageBoard/:groupName" render={() => <Dashboard />}/>
         </Switch>
         <Route
           path='/addPeople'

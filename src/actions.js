@@ -19,3 +19,17 @@ export const selectedGroup = (groupData, dispatch) => {
     payload: groupData,
   });
 };
+
+export const openGroup = (groupName) => {
+  return{
+    type: "OPEN_GROUP",
+    groupName: groupName,
+  };
+};
+
+export const getGroupName = (groupName) => {
+  return {
+    type: "GET_GROUP_NAME",
+    groupName: groupName
+  }
+}
