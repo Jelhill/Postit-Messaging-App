@@ -59,7 +59,5 @@ const mapDispatchToProps = (dispatch) => {
     getGroupName: (groupName) => dispatch(getGroupName(groupName)),
   };
 };
-// const mapDispatchToProps = (dispatch) => {
-//   return bindActionCreators({ selectedGroup: selectedGroup }, dispatch);
-// };
+
 export default connect(mapStateToProps, mapDispatchToProps)(Groups);
