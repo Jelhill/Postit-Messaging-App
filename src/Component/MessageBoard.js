@@ -2,21 +2,27 @@ import React, { Fragment, useEffect, useRef } from "react";
 import { connect } from "react-redux";
 import Avatar from "@material-ui/core/Avatar";
 import Chip from "@material-ui/core/Chip";
-import nnamdi from "../Images/nnamdi.jpg";
+
 
 function MessageBoard(props) {
-  const { dummyMessages, selectedGroup } = props;
+  const { dummyMessages, selectedGroup, groupData2, groupName, newMessage } = props;
   const postRef = useRef(null);
+
+  let filteredGroup = []
+  !groupName ? 
+    filteredGroup = dummyMessages : 
+    filteredGroup = groupData2.filter(eachGroup => eachGroup.name === groupName)[0].data
+    const groupSelected = newMessage ? filteredGroup.concat(newMessage) : filteredGroup
+
   useEffect(() => {
     postRef.current.scrollTo(0, postRef.current.scrollHeight);
-    console.log(postRef);
-  }, [dummyMessages.length]);
+  }, [groupSelected.length]);
+    
 
   return (
     <Fragment>
-      {selectedGroup ? (
-        <div className='compo-1' ref={postRef}>
-          {selectedGroup.data.map((member, index) => (
+          <div className='compo-1' ref={postRef}>
+          {groupSelected.map((member, index) => (
             <div className='post' key={index}>
               <Chip
                 avatar={
@@ -26,29 +32,19 @@ function MessageBoard(props) {
               />
               <p>{member.message}</p>
             </div>
-          ))}
+          ))
+          }
         </div>
-      ) : (
-        <div className='compo-1' ref={postRef}>
-          {dummyMessages.map((member, index) => (
-            <div className='post' key={index}>
-              <Chip
-                avatar={<Avatar alt='Memeber-profile' src={nnamdi} />}
-                label={member.memberName}
-              />
-              <p>{member.message}</p>
-            </div>
-          ))}
-        </div>
-      )}
     </Fragment>
   );
 }
 
 const mapStateToProps = (state) => {
+
   return {
     dummyMessages: state.dummyMessages,
-    selectedGroup: state.selectedGroup,
+    groupData2: state.groupData2,
+    newMessage: state.newMessage
   };
 };
 
