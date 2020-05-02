@@ -6,13 +6,13 @@ export const groupData = {
         memberName: "jelhill Umaru",
         memberAvatar:
           "https://ui-avatars.com/api/?name=MUSA&background=fc0&color=000",
-        message: "this first message",
+        message: "Hello guys",
       },
       {
         memberName: "Nnamdi Okorie",
         memberAvatar:
           "https://ui-avatars.com/api/?name=MUSA&background=fc0&color=000",
-        message: "this is second message",
+        message: "this is Nnamdi",
       },
       {
         memberName: "Tochukwu Idoko",
@@ -47,13 +47,13 @@ export const groupData = {
         memberName: "Tochukwu Idoko",
         memberAvatar:
           "https://ui-avatars.com/api/?name=MUSA&background=fc0&color=000",
-        message: "this is third message",
+        message: "i am Tochukwu",
       },
       {
         memberName: "Simon Okah",
         memberAvatar:
           "https://ui-avatars.com/api/?name=MUSA&background=fc0&color=000",
-        message: "Final Message",
+        message: "Nice Message",
       },
     ],
   },
@@ -64,25 +64,25 @@ export const groupData = {
         memberName: "jelhill Umaru",
         memberAvatar:
           "https://ui-avatars.com/api/?name=MUSA&background=fc0&color=000",
-        message: "this is first message",
+        message: "hahahahahahhahah",
       },
       {
         memberName: "Nnamdi Okorie",
         memberAvatar:
           "https://ui-avatars.com/api/?name=MUSA&background=fc0&color=000",
-        message: "this is second message",
+        message: "Nice jokee",
       },
       {
         memberName: "Tochukwu Idoko",
         memberAvatar:
           "https://ui-avatars.com/api/?name=MUSA&background=fc0&color=000",
-        message: "this is third message",
+        message: "LOOOOOOOL",
       },
       {
         memberName: "Simon Okah",
         memberAvatar:
           "https://ui-avatars.com/api/?name=MUSA&background=fc0&color=000",
-        message: "Final Message",
+        message: "LMAOOOOOOOO",
       },
     ],
   },
@@ -93,25 +93,25 @@ export const groupData = {
         memberName: "jelhill Umaru",
         memberAvatar:
           "https://ui-avatars.com/api/?name=MUSA&background=fc0&color=000",
-        message: "this is first message",
+        message: "We need to finish up",
       },
       {
         memberName: "Nnamdi Okorie",
         memberAvatar:
           "https://ui-avatars.com/api/?name=MUSA&background=fc0&color=000",
-        message: "this is second message",
+        message: "yes ooooo",
       },
       {
         memberName: "Tochukwu Idoko",
         memberAvatar:
           "https://ui-avatars.com/api/?name=MUSA&background=fc0&color=000",
-        message: "this is third message",
+        message: "Working on my part",
       },
       {
         memberName: "Simon Okah",
         memberAvatar:
           "https://ui-avatars.com/api/?name=MUSA&background=fc0&color=000",
-        message: "Final Message",
+        message: "Light no dey here ooo",
       },
     ],
   },
