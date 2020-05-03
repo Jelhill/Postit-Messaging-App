@@ -5,7 +5,7 @@ import Chip from "@material-ui/core/Chip";
 
 
 function MessageBoard(props) {
-  const { dummyMessages, selectedGroup, groupData2, groupName, newMessage } = props;
+  const { dummyMessages, groupData2, groupName, newMessage } = props;
   const postRef = useRef(null);
 
   let filteredGroup = []

@@ -7,7 +7,6 @@ import Groups from "./Groups";
 // import ListItem from "@material-ui/core/ListItem";
 // import ListItemText from "@material-ui/core/ListItemText";
 import { connect } from "react-redux";
-import { openGroup } from "../actions"
 
 
 

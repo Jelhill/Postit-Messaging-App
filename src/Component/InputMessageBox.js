@@ -1,8 +1,18 @@
-import React, { Fragment } from "react";
+import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
-import { getTypedMessage, postMessage } from "../actions";
+import { getTypedMessage, postMessage, reset } from "../actions";
 
-function InputMessageBox(props) {
+class InputMessageBox extends Component {
+
+  handleTypedMessage = (input) => {
+    this.props.getTypedMessage(input)
+  }
+
+  handlePostMessage = (userInput) => {
+    this.props.postMessage(userInput)
+  }
+
+  render() {
   return (
     <Fragment>
       <form className='addmessage'>
@@ -13,14 +23,15 @@ function InputMessageBox(props) {
             placeholder='Type your message here...'
             aria-label='Type your message here...'
             aria-describedby='basic-addon'
-            onChange={(e) => props.getTypedMessage(e.target.value)}
+            onChange={(e) => this.handleTypedMessage(e.target.value)}
+            value={this.props.userTypedMessage}
           />
           <button
             className='input-group-text'
             id='basic-addon'
             onClick={(e) => {
               e.preventDefault();
-              props.postMessage(props.userTypedMessage);
+              this.handlePostMessage(this.props.userTypedMessage);  
             }}
           >
             <span>
@@ -36,6 +47,7 @@ function InputMessageBox(props) {
       </form>
     </Fragment>
   );
+  }
 }
 
 const mapStateToProps = (state) => {
@@ -44,13 +56,14 @@ const mapStateToProps = (state) => {
     groupData: state.groupData,
     dummyMessages: state.dummyMessages,
     userTypedMessage: state.userTypedMessage,
+    valueReset: state.valueReset
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
     getTypedMessage: (typedMessage) => dispatch(getTypedMessage(typedMessage)),
-    postMessage: (typedMessage) => dispatch(postMessage(typedMessage)),
+    postMessage: (typedMessage) => dispatch(postMessage(typedMessage))
   };
 };
 
