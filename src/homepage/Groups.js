@@ -2,12 +2,11 @@ import React from "react";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
-import { selectedGroup, getGroupName } from "../actions";
-import { Link, useParams } from "react-router-dom"
-import { connect, useDispatch } from "react-redux";
-import { groupData } from "../Data/Data";
+import { getGroupName } from "../actions";
+import { Link } from "react-router-dom"
+import { connect } from "react-redux";
 
-const Groups = ({ members, groupData2, getGroupName }) => {
+const Groups = ({ groupData2 }) => {
     return (
         <div className='group'>
           <List>

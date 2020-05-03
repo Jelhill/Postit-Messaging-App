@@ -8,7 +8,9 @@ const initialState = {
   userTypedMessage: "",
   data,
   selectedGroup: null,
-  newMessage: []
+  newMessage: [],
+  valueReset: ""
+
 };
 
 const UserReducer = (state = initialState, action) => {
@@ -26,6 +28,7 @@ const UserReducer = (state = initialState, action) => {
     }];
     let newData = newstate.newMessage.concat(postData);
     newstate.newMessage = newData
+    newstate.userTypedMessage = ""
   }
 
   if (action.type === "GET_GROUP_NAME"){
