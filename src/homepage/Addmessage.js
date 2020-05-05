@@ -3,11 +3,10 @@ import { connect } from "react-redux";
 import InputMessageBox from "../Component/InputMessageBox";
 import MessageBoard from "../Component/MessageBoard";
 
-const Addmessage = ({groupName}) => {
-
+const Addmessage = ({ groupId }) => {
   return (
     <div className='scroll-bar'>
-      <MessageBoard groupName={groupName}/>
+      <MessageBoard groupId={groupId} />
       <InputMessageBox />
     </div>
   );

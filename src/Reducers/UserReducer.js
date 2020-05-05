@@ -26,16 +26,17 @@ const UserReducer = (state = initialState, action) => {
   }
 
   if (action.type === "POST_MESSAGE") {
-    let postData = [
-      {
-        memberName: "Simon Okah",
-        memberAvatar: "this is fourth message",
-        message: action.message,
-      },
-    ];
-    let newData = newstate.newMessage.concat(postData);
-    newstate.newMessage = newData;
-    newstate.userTypedMessage = "";
+    const newGroupData2 = newstate.groupData2.map((grp) => {
+      let grpMap = grp;
+      if (grpMap.id === action.payload.groupId) {
+        const newData = {
+          id: `${grpMap.data.length + 1}`,
+          ...action.payload,
+        };
+        grpMap.data = [...grpMap.data, newData];
+      }
+      return grpMap;
+    });
   }
 
   if (action.type === "GET_GROUP_NAME") {

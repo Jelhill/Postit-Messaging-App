@@ -9,8 +9,7 @@ import Groups from "./Groups";
 import { connect } from "react-redux";
 
 const Dashboard = () => {
-  const { groupName } = useParams();
-  console.log({ groupName }, "yeah");
+  const { groupId } = useParams();
 
   return (
     <div className='Container'>
@@ -33,7 +32,7 @@ const Dashboard = () => {
       </div>
       <div className='Nnamdi'>
         <Header />
-        <AddMessage groupName={groupName} />
+        <AddMessage groupId={groupId} />
       </div>
     </div>
   );
