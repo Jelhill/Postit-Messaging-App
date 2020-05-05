@@ -7,7 +7,7 @@ import {
 } from "../Data/Data";
 
 const initialState = {
-  // groupData,
+  groupData,
   groupData2,
   users,
   dummyMessages,
