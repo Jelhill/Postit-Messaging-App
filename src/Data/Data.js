@@ -1,5 +1,6 @@
 export const groupData = {
   softwareEngineer: {
+    id: "1",
     name: "Software Engineer",
     data: [
       {
@@ -29,6 +30,7 @@ export const groupData = {
     ],
   },
   dataScience: {
+    id: "2",
     name: "Data Science",
     data: [
       {
@@ -58,6 +60,7 @@ export const groupData = {
     ],
   },
   uiUx: {
+    id: "3",
     name: "UI/UX",
     data: [
       {
@@ -87,6 +90,7 @@ export const groupData = {
     ],
   },
   mobileEngineer: {
+    id: "4",
     name: "Mobile Engineer",
     data: [
       {
@@ -117,62 +121,34 @@ export const groupData = {
   },
 };
 
-
-
-
-export const groupData2 = 
-[
+export const groupData2 = [
   {
+    id: "1",
     name: "Software Engineer",
     data: [
       {
+        id: "1",
         memberName: "jelhill Umaru",
         memberAvatar:
           "https://ui-avatars.com/api/?name=MUSA&background=fc0&color=000",
         message: "this first message",
       },
       {
+        id: "2",
         memberName: "Nnamdi Okorie",
         memberAvatar:
           "https://ui-avatars.com/api/?name=MUSA&background=fc0&color=000",
         message: "this is second message",
       },
       {
+        id: "3",
         memberName: "Tochukwu Idoko",
         memberAvatar:
           "https://ui-avatars.com/api/?name=MUSA&background=fc0&color=000",
         message: "this is third message",
       },
       {
-        memberName: "Simon Okah",
-        memberAvatar:
-          "https://ui-avatars.com/api/?name=MUSA&background=fc0&color=000",
-        message: "Final Message",
-      },
-    ]
-  },
-  {
-    name: "Data Science",
-    data: [
-      {
-        memberName: "jelhill Umaru",
-        memberAvatar:
-          "https://ui-avatars.com/api/?name=MUSA&background=fc0&color=000",
-        message: "this is first message",
-      },
-      {
-        memberName: "Nnamdi Okorie",
-        memberAvatar:
-          "https://ui-avatars.com/api/?name=MUSA&background=fc0&color=000",
-        message: "this is second message",
-      },
-      {
-        memberName: "Tochukwu Idoko",
-        memberAvatar:
-          "https://ui-avatars.com/api/?name=MUSA&background=fc0&color=000",
-        message: "this is third message",
-      },
-      {
+        id: "4",
         memberName: "Simon Okah",
         memberAvatar:
           "https://ui-avatars.com/api/?name=MUSA&background=fc0&color=000",
@@ -181,72 +157,113 @@ export const groupData2 =
     ],
   },
   {
+    id: "2",
+    name: "Data Science",
+    data: [
+      {
+        id: "1",
+        memberName: "jelhill Umaru",
+        memberAvatar:
+          "https://ui-avatars.com/api/?name=MUSA&background=fc0&color=000",
+        message: "this is first message",
+      },
+      {
+        id: "2",
+        memberName: "Nnamdi Okorie",
+        memberAvatar:
+          "https://ui-avatars.com/api/?name=MUSA&background=fc0&color=000",
+        message: "this is second message",
+      },
+      {
+        id: "3",
+        memberName: "Tochukwu Idoko",
+        memberAvatar:
+          "https://ui-avatars.com/api/?name=MUSA&background=fc0&color=000",
+        message: "this is third message",
+      },
+      {
+        id: "4",
+        memberName: "Simon Okah",
+        memberAvatar:
+          "https://ui-avatars.com/api/?name=MUSA&background=fc0&color=000",
+        message: "Final Message",
+      },
+    ],
+  },
+  {
+    id: "3",
     name: "UIUX",
     data: [
       {
+        id: "1",
         memberName: "jelhill Umaru",
         memberAvatar:
           "https://ui-avatars.com/api/?name=MUSA&background=fc0&color=000",
         message: "I like UIUX message",
       },
       {
+        id: "2",
         memberName: "Nnamdi Okorie",
         memberAvatar:
           "https://ui-avatars.com/api/?name=MUSA&background=fc0&color=000",
         message: "this is second message",
       },
       {
+        id: "3",
         memberName: "Tochukwu Idoko",
         memberAvatar:
           "https://ui-avatars.com/api/?name=MUSA&background=fc0&color=000",
         message: "this is third message",
       },
       {
-        memberName: "Simon Okah",
-        memberAvatar:
-          "https://ui-avatars.com/api/?name=MUSA&background=fc0&color=000",
-        message: "Final Message",
-      },
-    ]
-  },
-  {
-    name: "Mobile Engineer",
-    data: [
-      {
-        memberName: "jelhill Umaru",
-        memberAvatar:
-          "https://ui-avatars.com/api/?name=MUSA&background=fc0&color=000",
-        message: "this is first message",
-      },
-      {
-        memberName: "Nnamdi Okorie",
-        memberAvatar:
-          "https://ui-avatars.com/api/?name=MUSA&background=fc0&color=000",
-        message: "this is second message",
-      },
-      {
-        memberName: "Tochukwu Idoko",
-        memberAvatar:
-          "https://ui-avatars.com/api/?name=MUSA&background=fc0&color=000",
-        message: "this is third message",
-      },
-      {
+        id: "4",
         memberName: "Simon Okah",
         memberAvatar:
           "https://ui-avatars.com/api/?name=MUSA&background=fc0&color=000",
         message: "Final Message",
       },
     ],
-  }
-]
-
-
-
+  },
+  {
+    id: "4",
+    name: "Mobile Engineer",
+    data: [
+      {
+        id: "1",
+        memberName: "jelhill Umaru",
+        memberAvatar:
+          "https://ui-avatars.com/api/?name=MUSA&background=fc0&color=000",
+        message: "this is first message",
+      },
+      {
+        id: "2",
+        memberName: "Nnamdi Okorie",
+        memberAvatar:
+          "https://ui-avatars.com/api/?name=MUSA&background=fc0&color=000",
+        message: "this is second message",
+      },
+      {
+        id: "3",
+        memberName: "Tochukwu Idoko",
+        memberAvatar:
+          "https://ui-avatars.com/api/?name=MUSA&background=fc0&color=000",
+        message: "this is third message",
+      },
+      {
+        id: "4",
+        memberName: "Simon Okah",
+        memberAvatar:
+          "https://ui-avatars.com/api/?name=MUSA&background=fc0&color=000",
+        message: "Final Message",
+      },
+    ],
+  },
+];
 
 export const users = [
   {
     member: {
-      id: 1,
+      id: "1",
       email: "jelhill@email.com",
       password: "ghhbrdshb",
       avatar: "",
@@ -255,7 +272,7 @@ export const users = [
   },
   {
     member: {
-      id: 2,
+      id: "2",
       email: "nnamdi@email.com",
       password: "hgkdhdsokw",
       avatar: "",
@@ -264,7 +281,7 @@ export const users = [
   },
   {
     member: {
-      id: 3,
+      id: "3",
       email: "tochukwu@email.com",
       password: "hksdufkddu",
       avatar: "",
@@ -273,7 +290,7 @@ export const users = [
   },
   {
     member: {
-      id: 4,
+      id: "4",
       email: "simon@email.com",
       password: "hksdufkddu",
       avatar: "",
@@ -284,21 +301,25 @@ export const users = [
 
 export const dummyMessages = [
   {
+    id: "1",
     memberName: "jelhill Umaru",
     memberAvatar: "",
     message: "this is first message",
   },
   {
+    id: "2",
     memberName: "Nnamdi Okorie",
     memberAvatar: "",
     message: "this is second message",
   },
   {
+    id: "3",
     memberName: "Tochukwu Idoko",
     memberAvatar: "",
     message: "this is third message",
   },
   {
+    id: "4",
     memberName: "Simon Okah",
     memberAvatar: "this is fourth message",
     message: "Final Message",
@@ -308,7 +329,7 @@ export const dummyMessages = [
 export const data = [
   {
     member: {
-      id: 1,
+      id: "1",
       email: "jelhill@email.com",
       password: "ghhbrdshb",
       groupJoined: [],
@@ -322,7 +343,7 @@ export const data = [
   },
   {
     member: {
-      id: 2,
+      id: "2",
       email: "nnamdi@email.com",
       password: "hgkdhdsokw",
       groupJoined: [],
@@ -338,7 +359,7 @@ export const data = [
   },
   {
     member: {
-      id: 3,
+      id: "3",
       email: "tochukwu@email.com",
       password: "hksdufkddu",
       groupJoined: [],
@@ -354,7 +375,7 @@ export const data = [
   },
   {
     member: {
-      id: 4,
+      id: "4",
       email: "simon@email.com",
       password: "wtohkdjdivs",
       groupJoined: [],

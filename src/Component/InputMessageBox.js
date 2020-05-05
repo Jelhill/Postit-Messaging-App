@@ -1,18 +1,25 @@
-import React, { Component, Fragment } from "react";
+import React, { Fragment } from "react";
 import { connect } from "react-redux";
+import { useParams } from "react-router-dom";
 import { getTypedMessage, postMessage, reset } from "../actions";
 
-class InputMessageBox extends Component {
+const InputMessageBox = (props) => {
+  const { groupId } = useParams();
+  const handleTypedMessage = (input) => {
+    props.getTypedMessage(input);
+  };
 
-  handleTypedMessage = (input) => {
-    this.props.getTypedMessage(input)
-  }
+  const handlePostMessage = (userInput) => {
+    const newMessage = {
+      message: userInput,
+      memberName: "Test User",
+      memberAvatar:
+        "https://ui-avatars.com/api/?name=DY&background=fc0&color=000",
+      groupId,
+    };
+    props.postMessage(newMessage);
+  };
 
-  handlePostMessage = (userInput) => {
-    this.props.postMessage(userInput)
-  }
-
-  render() {
   return (
     <Fragment>
       <form className='addmessage'>
@@ -23,15 +30,15 @@ class InputMessageBox extends Component {
             placeholder='Type your message here...'
             aria-label='Type your message here...'
             aria-describedby='basic-addon'
-            onChange={(e) => this.handleTypedMessage(e.target.value)}
-            value={this.props.userTypedMessage}
+            onChange={(e) => handleTypedMessage(e.target.value)}
+            value={props.userTypedMessage}
           />
           <button
             className='input-group-text'
             id='basic-addon'
             onClick={(e) => {
               e.preventDefault();
-              this.handlePostMessage(this.props.userTypedMessage);  
+              handlePostMessage(props.userTypedMessage);
             }}
           >
             <span>
@@ -47,8 +54,7 @@ class InputMessageBox extends Component {
       </form>
     </Fragment>
   );
-  }
-}
+};
 
 const mapStateToProps = (state) => {
   return {
@@ -56,14 +62,14 @@ const mapStateToProps = (state) => {
     groupData: state.groupData,
     dummyMessages: state.dummyMessages,
     userTypedMessage: state.userTypedMessage,
-    valueReset: state.valueReset
+    valueReset: state.valueReset,
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
     getTypedMessage: (typedMessage) => dispatch(getTypedMessage(typedMessage)),
-    postMessage: (typedMessage) => dispatch(postMessage(typedMessage))
+    postMessage: (newMessage) => dispatch(postMessage(newMessage)),
   };
 };
 
