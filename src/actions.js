@@ -8,7 +8,7 @@ export const getTypedMessage = (message) => {
 export const postMessage = (message) => {
   return {
     type: "POST_MESSAGE",
-    message: message,
+    payload: message,
   };
 };
 
@@ -21,7 +21,7 @@ export const selectedGroup = (groupData, dispatch) => {
 };
 
 export const openGroup = (groupName) => {
-  return{
+  return {
     type: "OPEN_GROUP",
     groupName: groupName,
   };
@@ -30,6 +30,6 @@ export const openGroup = (groupName) => {
 export const getGroupName = (groupName) => {
   return {
     type: "GET_GROUP_NAME",
-    groupName: groupName
-  }
-}
+    groupName: groupName,
+  };
+};
