@@ -7,7 +7,6 @@ import SignUpForm from "./Component/SignUpForm";
 import Dashboard from "./homepage/Dashboard";
 import Create from "./CreateChannel/Create";
 import AddPeople from "./Component/AddPeople";
-import Groups from "./homepage/Groups";
 
 class App extends Component {
   state = {

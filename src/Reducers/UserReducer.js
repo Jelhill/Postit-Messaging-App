@@ -35,8 +35,11 @@ const UserReducer = (state = initialState, action) => {
         };
         grpMap.data = [...grpMap.data, newData];
       }
+      console.log(grpMap);
       return grpMap;
     });
+    newstate.groupData2 = newGroupData2;
+    newstate.userTypedMessage = "";
   }
 
   if (action.type === "GET_GROUP_NAME") {
