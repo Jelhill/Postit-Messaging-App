@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { connect } from "react-redux";
 import { useParams } from "react-router-dom";
-import { getTypedMessage, postMessage, reset } from "../actions";
+import { getTypedMessage, postMessage } from "../actions";
 
 const InputMessageBox = (props) => {
   const { groupId } = useParams();
