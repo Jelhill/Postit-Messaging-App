@@ -12,6 +12,7 @@ function MessageBoard(props) {
   !groupName ? 
     filteredGroup = dummyMessages : 
     filteredGroup = groupData2.filter(eachGroup => eachGroup.name === groupName)[0].data
+    console.log("filly", filteredGroup)
     const groupSelected = newMessage ? filteredGroup.concat(newMessage) : filteredGroup
 
   useEffect(() => {

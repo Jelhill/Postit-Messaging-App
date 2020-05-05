@@ -1,7 +1,7 @@
 import { groupData, users, dummyMessages, data, groupData2 } from "../Data/Data";
 
 const initialState = {
-  groupData,
+  // groupData,
   groupData2,
   users,
   dummyMessages,
@@ -10,7 +10,6 @@ const initialState = {
   selectedGroup: null,
   newMessage: [],
   valueReset: ""
-
 };
 
 const UserReducer = (state = initialState, action) => {
@@ -20,12 +19,13 @@ const UserReducer = (state = initialState, action) => {
     newstate.userTypedMessage = action.message;
   }
 
-  if (action.type === "POST_MESSAGE") {
+  if (action.type === "POST_MESSAGE") {    
     let postData = [{
       memberName: "Simon Okah",
       memberAvatar: "this is fourth message",
       message: action.message,
     }];
+
     let newData = newstate.newMessage.concat(postData);
     newstate.newMessage = newData
     newstate.userTypedMessage = ""
