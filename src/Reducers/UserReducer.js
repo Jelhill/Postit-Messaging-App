@@ -1,29 +1,52 @@
-
-
-import { groupData, users, dummyMessages, data } from "../Data/Data"
+import {
+  groupData,
+  users,
+  dummyMessages,
+  data,
+  groupData2,
+} from "../Data/Data";
 
 const initialState = {
-    groupData,
-    users,
-    dummyMessages,
-    userTypedMessage: "",
-    data
-}
+  groupData,
+  groupData2,
+  users,
+  dummyMessages,
+  userTypedMessage: "",
+  data,
+  selectedGroup: null,
+  newMessage: [],
+  valueReset: "",
+};
 
 const UserReducer = (state = initialState, action) => {
-    const newstate = {...state}
+  const newstate = { ...state };
 
-    if(action.type === "GET_MESSAGE"){
-        newstate.userTypedMessage = action.message
-    }
-    
-    if(action.type === "POST_MESSAGE"){
-        let postData = {memberName: "Simon Okah", memberAvatar: "this is fourth message", message: action.message        }
-        let newData = [...newstate.dummyMessages, postData]
-        newstate.dummyMessages = newData
-    }
+  if (action.type === "GET_MESSAGE") {
+    newstate.userTypedMessage = action.message;
+  }
 
-    return newstate
-}
+  if (action.type === "POST_MESSAGE") {
+    const newGroupData2 = newstate.groupData2.map((grp) => {
+      let grpMap = grp;
+      if (grpMap.id === action.payload.groupId) {
+        const newData = {
+          id: `${grpMap.data.length + 1}`,
+          ...action.payload,
+        };
+        grpMap.data = [...grpMap.data, newData];
+      }
+      console.log(grpMap);
+      return grpMap;
+    });
+    newstate.groupData2 = newGroupData2;
+    newstate.userTypedMessage = "";
+  }
 
-export default UserReducer
+  if (action.type === "GET_GROUP_NAME") {
+    console.log("Action NAme", action.groupName);
+  }
+
+  return newstate;
+};
+
+export default UserReducer;

@@ -1,22 +1,21 @@
 import React from "react";
-import { connect } from "react-redux"
+import { connect } from "react-redux";
 import InputMessageBox from "../Component/InputMessageBox";
 import MessageBoard from "../Component/MessageBoard";
 
-const AddMessage = () => {
-  
+const Addmessage = ({ groupId }) => {
   return (
-      <div className="scroll-bar">
-          <MessageBoard  />
-          <InputMessageBox />
-      </div>   
+    <div className='scroll-bar'>
+      <MessageBoard groupId={groupId} />
+      <InputMessageBox />
+    </div>
   );
 };
 
-const mapStateToProps = (state) => {  
+const mapStateToProps = (state) => {
   return {
     dummyMessages: state.dummyMessages,
-  }
-}
+  };
+};
 
-export default connect(mapStateToProps)(AddMessage);
+export default connect(mapStateToProps)(Addmessage);

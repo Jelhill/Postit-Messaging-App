@@ -32,6 +32,11 @@ class App extends Component {
           <Route exact path='/homepage' component={Dashboard} />
           <Route exact path='/CreateChannel' component={Create} />
           <Route exact path='/creategroup' component={Create} />
+          <Route
+            exact
+            path='/messageBoard/:groupId'
+            render={() => <Dashboard />}
+          />
         </Switch>
         <Route
           path='/addPeople'
